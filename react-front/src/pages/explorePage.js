@@ -1,27 +1,26 @@
-import React, { useState } from 'react';
-import Button from 'react-bootstrap/Button';
-import Offcanvas from 'react-bootstrap/Offcanvas';
-
-export default function OffCanvasExample() {
-  const [show, setShow] = useState(false);
-
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
-
+import React from "react";
+import "./explorePage.scss";
+import Cards from "../components/BuyerCard/BuyerCard";
+const explorePage = () => {
   return (
-    <>
-      <Button variant="primary" onClick={handleShow} className="me-2">
-       Show Categories
-      </Button>
-      <Offcanvas show={show} onHide={handleClose}>
-        <Offcanvas.Header closeButton>
-          <Offcanvas.Title>Offcanvas</Offcanvas.Title>
-        </Offcanvas.Header>
-        <Offcanvas.Body>
-          Some text as placeholder. In real life you can have the elements you
-          have chosen. Like, text, images, lists, etc.
-        </Offcanvas.Body>
-      </Offcanvas>
-    </>
+    <div className="explorePage">
+      <div className="buttonsBar">
+        <button className="Sellbtn">Sell</button>
+        <button className="BuyReqbtn">ReqBuy</button>
+      </div>
+      <div className="categoryBar">
+        <p>1</p>
+        <p>1</p>
+        <p>1</p>
+        <p>1</p>
+      </div>
+      <div className="CardsShow">
+        <Cards />
+        <Cards />
+        <Cards />
+      </div>
+    </div>
   );
-}
+};
+
+export default explorePage;

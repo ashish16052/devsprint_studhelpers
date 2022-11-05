@@ -1,0 +1,18 @@
+.explorePage{
+    background-color: #ffffff;
+    height:100vh;
+    .buttonBar{
+       display: flex;
+       flex-direction: row; 
+    }
+    .categoryBar{
+        display: flex;
+        flex-direction: row;
+        height: 15vh;
+        background-color: rgb(243, 243, 243);
+    }
+    .CardsShow{
+        display: flex;
+        flex-direction: row;
+    }
+}
