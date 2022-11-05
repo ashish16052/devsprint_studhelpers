@@ -5,10 +5,12 @@ import { BrowserRouter } from 'react-router-dom';
 import { configureStore } from '@reduxjs/toolkit';
 import { Provider } from 'react-redux';
 import user from './reducers/user'
+import modal from './reducers/modal'
 
 const store = configureStore({
   reducer: {
-    user: user
+    user: user,
+    modal: modal,
   }
 })
 

@@ -3,8 +3,12 @@ import "./explorePage.scss";
 import Cards from "../components/BuyerCard/BuyerCard";
 import PostForm from "../components/PostForm/PostForm";
 import Navbar from "../components/NavBar/navbar.js";
+import { useSelector } from 'react-redux'
 
 const explorePage = () => {
+
+  const modal = useSelector((state) => state.modal.value)
+
   return (
     <div className="explorePage">
       <Navbar />
@@ -32,6 +36,9 @@ const explorePage = () => {
         <Cards />
         <Cards />
       </div>
+      {
+        modal && <PostForm />
+      }
     </div>
   );
 };

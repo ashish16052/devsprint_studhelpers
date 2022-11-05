@@ -1,0 +1,107 @@
+.post-form {
+    background-color: #0000004f;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    .form-modal {
+        background-color: #ffffff;
+        border-radius: 10px;
+        height: 58vh;
+        width: 60vw;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 30px 30px;
+
+        input {
+            border: none;
+            outline: none;
+            height: 30px;
+        }
+
+        hr {
+            margin: 10px 0;
+            height: 2px;
+            border: none;
+            background-color: #ebecf0;
+        }
+
+        .product-title {
+            font-size: 25px;
+        }
+
+        .info-grp {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            
+            input {
+                font-size: 15px;
+                width: 45%;
+            }
+        }
+
+        .description {
+            border: none;
+            outline: none;
+            resize: none;
+            font-family: inherit;
+            padding: 10px 10px;
+            font-size: 15px;
+            width: -webkit-calc(100% - 20px);
+            width: -moz-calc(100% - 20px);
+            width: calc(100% - 20px);
+            border: 1px solid #9553EE;
+            border-radius: 5px;
+        }
+
+        .select {
+            margin: 15px 0;
+
+            .css-1s2u09g-control,
+            .css-1pahdxg-control {
+                border-color: #9553EE;
+                box-shadow: none;
+            }
+        }
+
+        .action-btns{
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+
+            .btn{
+                cursor: pointer;
+                padding: 5px 20px;
+                border-radius: 5px;
+            }
+
+            .cancel{
+                background-color: rgb(243, 243, 243);
+            }
+
+            .delete{
+                border: 1px solid #9553EE;
+                color: #9553ee;
+            }
+
+            .save{
+                background-color: #9553ee;
+                color: #ffffff;
+            }
+
+            .btn-grp{
+                display: flex;
+                justify-content: space-between;
+                width: 200px;
+            }
+        }
+    }
+
+
+}
