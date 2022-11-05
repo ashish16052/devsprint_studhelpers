@@ -31,7 +31,6 @@ function App() {
         <Route exact path='/' element={user ? <Home /> : <Navigate to='/login' />} />
         <Route exact path='/login' element={user ? <Home /> : <Login />} />
       </Routes>
-      {/* <Login/> */}
       <ExplorePage/>
     </div>
   );

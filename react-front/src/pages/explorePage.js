@@ -5,8 +5,12 @@ const explorePage = () => {
   return (
     <div className="explorePage">
       <div className="buttonsBar">
-        <button className="Sellbtn">Sell</button>
-        <button className="BuyReqbtn">ReqBuy</button>
+        <a href="something" class="button1">
+          Sell
+        </a>
+        <a href="something" class="button2">
+         Req Buy
+        </a>
       </div>
       <div className="categoryBar">
         <p>1</p>
