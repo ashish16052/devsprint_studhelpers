@@ -1,6 +1,7 @@
 .Navbar {
   display: flex;
   justify-content: space-between;
+  padding: 10px 20px;
   padding-right: 1vw;
   .brand {
     display: flex;
@@ -23,7 +24,7 @@
   .RightSidebar {
     display: flex;
     align-items: center;
-   
+   margin-right: 20px;
     align-self: center;
     border-color: #9553ee;
       p {
@@ -40,7 +41,7 @@
         color: white;
       }
     img {
-      width: 3vw;
+      width: 30px;
       padding-right: 8px;
     }
   }
