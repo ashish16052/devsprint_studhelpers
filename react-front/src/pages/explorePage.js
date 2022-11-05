@@ -2,17 +2,15 @@ import React from "react";
 import "./explorePage.scss";
 import Cards from "../components/BuyerCard/BuyerCard";
 import PostForm from "../components/PostForm/PostForm";
-import Navbar from "../components/NavBar/navbar.js";
 import { useSelector } from 'react-redux'
-
-const explorePage = () => {
-
-  const modal = useSelector((state) => state.modal.value)
-
 import Navbar from "../components/NavBar/Navbar.js";
 import SearchIcon from "../assets/searchIcon.svg";
 import Select from "react-select";
+
 const ExplorePage = () => {
+
+  const modal = useSelector((state) => state.modal.value)
+  
   const options = [
     { value: "books", label: "books" },
     { value: "eatables", label: "eatables" },
