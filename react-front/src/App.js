@@ -7,6 +7,7 @@ import Home from "./pages/home";
 import { useDispatch } from 'react-redux'
 import { login } from './reducers/user'
 
+import ExplorePage from "./pages/explorePage"
 function App() {
 
   const [user, setUser] = useState(sessionStorage.getItem('user'));
@@ -30,6 +31,8 @@ function App() {
         <Route exact path='/' element={user ? <Home /> : <Navigate to='/login' />} />
         <Route exact path='/login' element={user ? <Home /> : <Login />} />
       </Routes>
+      {/* <Login/> */}
+      <ExplorePage/>
     </div>
   );
 }
