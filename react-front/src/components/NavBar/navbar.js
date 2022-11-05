@@ -4,6 +4,7 @@ import "./navbar.scss";
 import ProfileImage from "../../assets/profileIcon.svg";
 import { useSelector } from 'react-redux'
 
+import { Link } from "react-router-dom";
 const Navbar = () => {
 
   const user = useSelector((state) => state.user.value)
@@ -16,11 +17,13 @@ const Navbar = () => {
       </div>
       <div className="RightSidebar">
         <div className="username">Hi {user && user.name}</div>
-        {
-          user ?
-            <img src={user.profilePic} alt="Profile Image" /> :
-            <img src={ProfileImage} alt="Profile Image" />
-        }
+        <Link to="/user">
+          {
+            user ?
+              <img src={user.profilePic} alt="Profile Image" /> :
+              <img src={ProfileImage} alt="Profile Image" />
+          }
+        </Link>
         <p>Log Out</p>
       </div>
     </div>

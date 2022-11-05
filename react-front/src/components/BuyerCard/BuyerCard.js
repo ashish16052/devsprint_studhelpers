@@ -44,5 +44,4 @@ const BuyerCard = (props) => {
     </div>
   )
 }
-
 export default BuyerCard
