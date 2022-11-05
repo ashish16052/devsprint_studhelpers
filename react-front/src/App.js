@@ -6,6 +6,7 @@ import Login from "./pages/Login";
 import Home from "./pages/Home";
 import { useDispatch } from 'react-redux'
 import { login } from './reducers/user'
+import User from './pages/User'
 
 import ExplorePage from "./pages/explorePage"
 function App() {
@@ -30,6 +31,7 @@ function App() {
       <Routes>
         <Route exact path='/' element={user ? <ExplorePage/> : <Navigate to='/login' />} />
         <Route exact path='/login' element={<Login />} />
+        <Route exact path='/user' element={<User/>}/>
       </Routes>
     </div>
   );

@@ -3,7 +3,7 @@ import "./explorePage.scss";
 import Cards from "../components/BuyerCard/BuyerCard";
 import PostForm from "../components/PostForm/PostForm";
 import { useSelector } from 'react-redux'
-import Navbar from "../components/NavBar/Navbar.js";
+import Navbar from "../components/NavBar/navbar.js";
 import SearchIcon from "../assets/searchIcon.svg";
 import Select from "react-select";
 import { useDispatch } from 'react-redux'

@@ -21,5 +21,4 @@ const BuyerCard = () => {
     </div>
   )
 }
-
 export default BuyerCard
