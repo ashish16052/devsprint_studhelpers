@@ -1,7 +1,7 @@
 import React from 'react'
 import studCartLogo from "../../assets/studCartLogo.png"
 import "./navbar.scss";
-const navbar = () => {
+const Navbar = () => {
   return (
     <div className='brand'>
         <img src={studCartLogo} alt='website logo' />
@@ -10,4 +10,4 @@ const navbar = () => {
   )
 }
 
-export default navbar
+export default Navbar
