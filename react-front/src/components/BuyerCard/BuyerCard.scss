@@ -32,7 +32,7 @@
         -webkit-backdrop-filter: blur(4px) saturate(200%);
         background-color: rgba(255, 255, 255, 0.288);
         padding: 2px 5px;
-        color: #ffffff;
+        color: #373737;
     }
 
     .prodDescription {
@@ -64,6 +64,24 @@
         font-size: 15px;
         font-weight: bold;
         cursor: pointer;
+    }
+
+    .edit {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        border-radius: 50%;
+        backdrop-filter: blur(4px) saturate(200%);
+        -webkit-backdrop-filter: blur(4px) saturate(200%);
+        background-color: rgba(255, 255, 255, 0.288);
+        height: 20px;
+        width: 20px;
+        padding: 5px;
+        cursor: pointer;
+
+        img {
+            height: 20px;
+        }
     }
 }
 

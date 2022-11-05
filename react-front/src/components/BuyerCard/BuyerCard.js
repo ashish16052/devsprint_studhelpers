@@ -2,6 +2,8 @@ import React from 'react'
 import './BuyerCard.scss'
 import { useDispatch } from 'react-redux'
 import { showProductModal } from '../../reducers/productModal'
+import edit from '../../assets/edit.svg'
+import { setModal } from '../../reducers/modal';
 
 const BuyerCard = (props) => {
 
@@ -16,12 +18,16 @@ const BuyerCard = (props) => {
     picture: props.product.picture,
   }
 
-
   const dispatch = useDispatch();
 
   const setProject = () => {
     console.log("setProduct");
     dispatch(showProductModal(product))
+  }
+
+  const editForm = () => {
+    dispatch(showProductModal(product))
+    dispatch(setModal(true))
   }
 
   return (
@@ -41,6 +47,12 @@ const BuyerCard = (props) => {
         }
       </div>
       <div className='prodBid'>Bid</div>
+      {
+        props.editable &&
+        <div className='edit' onClick={editForm}>
+          <img src={edit} />
+        </div>
+      }
     </div>
   )
 }

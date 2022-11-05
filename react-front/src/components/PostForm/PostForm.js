@@ -4,17 +4,25 @@ import CreatableSelect from 'react-select/creatable';
 import { useDispatch } from 'react-redux'
 import { setModal } from '../../reducers/modal';
 import axios from 'axios'
+import { useSelector } from 'react-redux'
 
 const PostForm = () => {
 
   const dispatch = useDispatch();
+  const user = useSelector((state) => state.user.value)
+  const product = useSelector((state) => state.productModal.value).productData
 
-  const [title, setTitle] = useState('')
-  const [description, setDescription] = useState('')
-  const [price, setPrice] = useState(0)
-  const [city, setCity] = useState('')
+  const [title, setTitle] = useState(product ? product.title : '')
+  const [description, setDescription] = useState(product ? product.description : '')
+  const [price, setPrice] = useState(product ? product.price : 0)
+  const [city, setCity] = useState(product ? product.city : '')
   const [college, setCollege] = useState('')
-  const [tags, setTags] = useState([])
+  const [tags, setTags] = useState(product && product.tags ? product.tags.map((tag) => {
+    var obj = {}
+    obj.label = tag
+    obj.value = tag
+    return obj;
+  }) : [])
   const [file, setFile] = useState()
 
   function uploadFile(event) {
@@ -39,7 +47,15 @@ const PostForm = () => {
 
   async function submitForm(event) {
     event.preventDefault()
-    const url = `${process.env.REACT_APP_API_URL}/product/create`;
+    var url;
+    if (product && product._id) {
+      url = `${process.env.REACT_APP_API_URL}/product/update/${product._id}`;
+      console.log('update');
+    }
+    else {
+      console.log('create');
+      url = `${process.env.REACT_APP_API_URL}/product/create`;
+    }
     const picture = await getBase64(file);
     var tagsArray = []
     for (var i = 0; i < tags.length; i++) {
@@ -51,12 +67,27 @@ const PostForm = () => {
       price: price,
       city: city,
       tags: tagsArray,
-      picture: picture
+      picture: picture,
+      seller: user._id,
     }
     axios.post(url, body).then((response) => {
       console.log(response.data);
       dispatch(setModal(false));
     });
+  }
+
+  const deleteProduct = async () => {
+    var url;
+    if (product && product._id) {
+      url = `${process.env.REACT_APP_API_URL}/product/delete/${product._id}`;
+      console.log('delete');
+      axios.post(url).then((response) => {
+        console.log(response.data);
+        dispatch(setModal(false));
+      });
+    }
+    else
+      dispatch(setModal(false));
   }
 
   return (
@@ -73,7 +104,7 @@ const PostForm = () => {
             <input onChange={(e) => setCity(e.target.value)} value={city} type="text" placeholder='City' />
             <input onChange={(e) => setCollege(e.target.value)} value={college} type="text" placeholder='College or University' />
           </div>
-          <CreatableSelect placeholder='Tags' className='select' isMulti isClearable onChange={(e) => {
+          <CreatableSelect value={tags} placeholder='Tags' className='select' isMulti isClearable onChange={(e) => {
             setTags(e)
             console.log(e)
           }} />
@@ -82,7 +113,7 @@ const PostForm = () => {
         <div className='action-btns'>
           <div className='cancel btn' onClick={closeModal}>Cancel</div>
           <div className='btn-grp'>
-            <div className='delete btn' >Delete</div>
+            <div className='delete btn' onClick={deleteProduct}>Delete</div>
             <div className='save btn' onClick={submitForm}>Save</div>
           </div>
         </div>

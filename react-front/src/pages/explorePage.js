@@ -36,7 +36,7 @@ const ExplorePage = () => {
 
   useEffect(() => {
     getProducts();
-  }, [])
+  }, [modal])
 
 
   return (
@@ -76,7 +76,7 @@ const ExplorePage = () => {
       <div className="CardsShow">
         {
           products.map((product) => (
-            <Cards product={product} />
+            <Cards product={product} editable={false}/>
           ))
         }
       </div>
