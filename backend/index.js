@@ -7,6 +7,7 @@ const port = process.env.PORT;
 const app = express();
 const passport = require("passport");
 const session = require('express-session');
+const passportSetup = require('./lib/passport');
 
 var corsOptions = {
     origin: true,
