@@ -1,21 +1,44 @@
 import React from 'react'
 import './BuyerCard.scss'
+import { useDispatch } from 'react-redux'
+import { showProductModal } from '../../reducers/productModal'
 
-const BuyerCard = () => {
+const BuyerCard = (props) => {
+
+  const product = {
+    _id: props.product._id,
+    title: props.product.title,
+    description: props.product.description,
+    price: props.product.price,
+    city: props.product.city,
+    seller: props.product.seller,
+    tags: props.product.tags,
+    picture: props.product.picture,
+  }
+
+
+  const dispatch = useDispatch();
+
+  const setProject = () => {
+    console.log("setProduct");
+    dispatch(showProductModal(product))
+  }
+
   return (
-    <div className='BuyerCard'>
-      <img className="productPic" src='https://upload.wikimedia.org/wikipedia/commons/4/41/Left_side_of_Flying_Pigeon.jpg' alt='' />
+    <div className='BuyerCard' onClick={setProject}>
+      <img className="productPic" src={product.picture} alt='' />
       <div className='productName'>
-        <h3>Product Name</h3>
-        <h3 className='prodPrice'>price</h3>
+        <h3>{product.title}</h3>
+        <h3 className='prodPrice'>{product.price}</h3>
       </div>
-      <p className='prodDescription'>Product Description goes here...</p>
-      <p className='prodLocation'>Location</p>
+      <p className='prodDescription'>{product.description}</p>
+      <p className='prodLocation'>{product.city}</p>
       <div className='tags'>
-        <p>#tag</p>
-        <p>#tag</p>
-        <p>#tag</p>
-        <p>#tag</p>
+        {
+          product.tags.map((tag) => (
+            <p>{tag}</p>
+          ))
+        }
       </div>
       <div className='prodBid'>Bid</div>
     </div>

@@ -6,11 +6,13 @@ import { configureStore } from '@reduxjs/toolkit';
 import { Provider } from 'react-redux';
 import user from './reducers/user'
 import modal from './reducers/modal'
+import productModal from './reducers/productModal'
 
 const store = configureStore({
   reducer: {
     user: user,
     modal: modal,
+    productModal: productModal,
   }
 })
 
