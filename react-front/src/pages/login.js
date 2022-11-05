@@ -2,7 +2,7 @@ import React from 'react'
 import studCartLogo from "../assets/studCartLogo.png"
 import GoogleLogo from "../assets/google.webp";
 import "./loginPage.scss"
-const login = () => {
+const Login = () => {
 
   const loginUser = (e) => {
     e.preventDefault();
@@ -23,4 +23,4 @@ const login = () => {
     </div>
   )
 }
-export default login
+export default Login

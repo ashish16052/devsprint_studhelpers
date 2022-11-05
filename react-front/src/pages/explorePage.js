@@ -12,7 +12,7 @@ const explorePage = () => {
 import Navbar from "../components/NavBar/Navbar.js";
 import SearchIcon from "../assets/searchIcon.svg";
 import Select from "react-select";
-const explorePage = () => {
+const ExplorePage = () => {
   const options = [
     { value: "books", label: "books" },
     { value: "eatables", label: "eatables" },
@@ -67,4 +67,4 @@ const explorePage = () => {
   );
 };
 
-export default explorePage;
+export default ExplorePage;
