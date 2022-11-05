@@ -5,10 +5,13 @@ const fs = require("fs");
 require("dotenv").config();
 const port = process.env.PORT;
 const app = express();
+const passport = require("passport");
+const session = require('express-session');
 
 var corsOptions = {
     origin: true,
     optionsSuccessStatus: 200,
+    credentials: true,
 };
 app.use(cors(corsOptions));
 
@@ -20,6 +23,14 @@ app.use(
         parameterLimit: 1000000,
     })
 );
+
+app.use(session({
+    secret: process.env.SECRET,
+    resave: false,
+    saveUninitialized: false
+}));
+app.use(passport.initialize());
+app.use(passport.session());
 
 app.get('/', (re1, res) => {
     res.send('Running on port ' + port)
