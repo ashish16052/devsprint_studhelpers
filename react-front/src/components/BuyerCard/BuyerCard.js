@@ -1,14 +1,23 @@
 import React from 'react'
+import './BuyerCard.scss'
 
 const BuyerCard = () => {
   return (
     <div className='BuyerCard'>
-        <img src='#' alt=''/>
-        <h3 className='productName'>P. Name</h3>
-        <p className='prodLocation'>Location</p>
-        <p className='prodAbout'>About</p>
-        <p className='prodDuration'>Prod Duration</p>
-        <p className='prodBidtime'>Bid time here</p>
+      <img className="productPic" src='https://upload.wikimedia.org/wikipedia/commons/4/41/Left_side_of_Flying_Pigeon.jpg' alt='' />
+      <div className='productName'>
+        <h3>Product Name</h3>
+        <h3 className='prodPrice'>price</h3>
+      </div>
+      <p className='prodDescription'>Product Description goes here...</p>
+      <p className='prodLocation'>Location</p>
+      <div className='tags'>
+        <p>#tag</p>
+        <p>#tag</p>
+        <p>#tag</p>
+        <p>#tag</p>
+      </div>
+      <div className='prodBid'>Bid</div>
     </div>
   )
 }

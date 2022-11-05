@@ -1,6 +1,7 @@
 import React from "react";
 import "./explorePage.scss";
 import Cards from "../components/BuyerCard/BuyerCard";
+import PostForm from "../components/PostForm/PostForm";
 const explorePage = () => {
   return (
     <div className="explorePage">
@@ -15,6 +16,9 @@ const explorePage = () => {
         <p>1</p>
       </div>
       <div className="CardsShow">
+        <Cards />
+        <Cards />
+        <Cards />
         <Cards />
         <Cards />
         <Cards />

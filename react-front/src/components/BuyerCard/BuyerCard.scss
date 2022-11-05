@@ -1,0 +1,66 @@
+.BuyerCard {
+    width: 350px;
+    background-color: rgb(243, 243, 243);
+    padding: 5px;
+    border-radius: 10px;
+    position: relative;
+    margin: 20px 0;
+
+    .productPic {
+        width: 100%;
+        border-radius: 10px 10px;
+    }
+
+    .productName {
+        display: flex;
+        justify-content: space-between;
+        padding: 5px 0;
+
+        .prodPrice {
+            color: #9553EE;
+        }
+    }
+
+    .prodLocation {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        border-radius: 5px;
+        backdrop-filter: blur(4px) saturate(200%);
+        -webkit-backdrop-filter: blur(4px) saturate(200%);
+        background-color: rgba(255, 255, 255, 0.288);
+        padding: 2px 5px;
+        color: #ffffff;
+    }
+
+    .prodDescription {
+        padding: 5px 0;
+    }
+
+    .tags {
+        display: flex;
+        padding: 5px 0;
+
+        p {
+            margin: 0 5px 0 0;
+            font-size: 12px;
+            border-radius: 5px;
+            background-color: #9553EE;
+            padding: 2px 5px;
+            color: #ffffff;
+        }
+    }
+
+    .prodBid {
+        border: 2px solid #9553EE;
+        border-radius: 5px;
+        padding: 5px;
+        margin: 10px 0 5px 0;
+        display: flex;
+        justify-content: center;
+        color: #9553EE;
+        font-size: 15px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+}
