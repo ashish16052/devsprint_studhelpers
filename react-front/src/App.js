@@ -7,7 +7,7 @@ import Home from "./pages/Home";
 import { useDispatch } from 'react-redux'
 import { login } from './reducers/user'
 
-import ExplorePage from "./pages/ExplorePage"
+import ExplorePage from "./pages/explorePage"
 function App() {
 
   const [user, setUser] = useState(sessionStorage.getItem('user'));

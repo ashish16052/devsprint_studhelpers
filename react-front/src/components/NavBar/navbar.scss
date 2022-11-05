@@ -1,18 +1,47 @@
-.brand {
+.Navbar {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 1vw;
+  .brand {
     display: flex;
     align-items: center;
 
     img {
-        height: 40px;
-        align-self: center;
-        margin-right: 10px;
-        padding-left: 10px;
+      height: 40px;
+      align-self: center;
+      margin-right: 10px;
+      padding-left: 10px;
     }
 
     .siteName {
-        text-align: center;
-        font-size: 6vh;
-        color: #9553EE;
-        font-weight: bold;
+      text-align: center;
+      font-size: 6vh;
+      color: #9553ee;
+      font-weight: bold;
     }
+  }
+  .RightSidebar {
+    display: flex;
+    align-items: center;
+   
+    align-self: center;
+    border-color: #9553ee;
+      p {
+        font-size: 2.1vh;
+        color: #9553ee;
+        border-style: solid;
+        width: fit-content;
+        height: fit-content;
+        padding:7px;
+        border-width: 2px;
+      }
+      p:hover{
+        background-color: #9553ee;
+        color: white;
+      }
+    img {
+      width: 3vw;
+      padding-right: 8px;
+    }
+  }
 }

@@ -47,10 +47,18 @@
       width: 35vw;
     }
     .wrapSearchBar{
-      // display: ;
+
       .search{
+        display: flex;
+        align-items: center;
         .searchTerm{
-          
+          width: 16vw;
+          height: 4vh;
+          border-radius: 8px;
+          margin-left: 10vw;
+        }
+        img.searchImage{
+          height: 3.55vh;
         }
       }
     }
