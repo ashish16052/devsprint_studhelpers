@@ -1,5 +1,4 @@
 import React from "react";
-import BuyerCard from "./components/BuyerCard";
 import Login from "./pages/login";
 function App() {
   return (
@@ -8,5 +7,4 @@ function App() {
     </div>
   );
 }
-
 export default App;
