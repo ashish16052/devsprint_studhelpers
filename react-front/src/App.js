@@ -2,12 +2,12 @@ import React from "react";
 import { useState, useEffect } from 'react'
 import { Route, Routes, Navigate } from 'react-router-dom'
 import axios from 'axios'
-import Login from "./pages/login";
-import Home from "./pages/home";
+import Login from "./pages/Login";
+import Home from "./pages/Home";
 import { useDispatch } from 'react-redux'
 import { login } from './reducers/user'
 
-import ExplorePage from "./pages/explorePage"
+import ExplorePage from "./pages/ExplorePage"
 function App() {
 
   const [user, setUser] = useState(sessionStorage.getItem('user'));
