@@ -2,34 +2,6 @@ const express = require("express");
 const mongoose = require("mongoose");
 const mainRouter = express.Router();
 const productModel = mongoose.model("Product");
-const multer = require('multer')
-const fs = require('fs');
-const path = require('path');
-
-const storage = multer.diskStorage({
-    destination: function (req, file, cb) {
-        cb(null, 'uploads/')
-    },
-    filename: function (req, file, cb) {
-        cb(null, file.fieldname)
-    }
-})
-
-const upload = multer({
-    storage: storage,
-    limits: { fileSize: 1 * 1000 * 5000 },
-    fileFilter: function (req, file, cb) {
-        var filetypes = /jpeg|jpg|png/;
-        var mimetype = filetypes.test(file.mimetype);
-        var extname = filetypes.test(path.extname(
-            file.originalname).toLowerCase());
-        if (mimetype && extname) {
-            return cb(null, true);
-        }
-        cb("Error: File upload only supports the "
-            + "following filetypes - " + filetypes);
-    }
-});
 
 module.exports.controllerFunction = function (app) {
 
@@ -53,8 +25,7 @@ module.exports.controllerFunction = function (app) {
         });
     });
 
-    mainRouter.post("/create", upload.single('cover'), async (req, res, next) => {
-        var bs64 = fs.readFileSync(path.join('uploads/' + req.file.filename)).toString('base64');
+    mainRouter.post("/create", async (req, res, next) => {
         const newModel = new productModel({
             _id: Date.now(),
             title: req.body.title,
@@ -63,10 +34,7 @@ module.exports.controllerFunction = function (app) {
             city: req.body.city,
             tags: req.body.tags,
             seller: req.user,
-            picture: {
-                data: bs64,
-                contentType: 'image/png'
-            },
+            picture: req.body.picture
         });
         newModel.save(function (err, doc) {
             if (err) {

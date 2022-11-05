@@ -6,16 +6,24 @@ import { useSelector } from 'react-redux'
 import Navbar from "../components/NavBar/Navbar.js";
 import SearchIcon from "../assets/searchIcon.svg";
 import Select from "react-select";
+import { useDispatch } from 'react-redux'
+import { setModal } from '../reducers/modal';
 
 const ExplorePage = () => {
 
+  const dispatch = useDispatch();
   const modal = useSelector((state) => state.modal.value)
-  
+
   const options = [
     { value: "books", label: "books" },
     { value: "eatables", label: "eatables" },
     { value: "instruments", label: "instruments" },
   ];
+
+  const showModal = () => {
+    dispatch(setModal(true));
+  }
+
   return (
     <div className="explorePage">
       <Navbar />
@@ -42,12 +50,12 @@ const ExplorePage = () => {
           </div>
         </div>
         <div className="buttonsBar">
-          <a href="something" class="button1">
+          <div class="button1" onClick={showModal}>
             Sell
-          </a>
-          <a href="something" class="button2">
+          </div>
+          <div class="button2">
             Req Buy
-          </a>
+          </div>
         </div>
       </div>
       <div className="CardsShow">

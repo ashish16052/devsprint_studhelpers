@@ -28,8 +28,7 @@ const productSchema = new Schema({
         default: []
     },
     picture: {
-        data: Buffer,
-        contentType: String
+        type: String,
     }
 });
 
