@@ -1,0 +1,18 @@
+.brand {
+    display: flex;
+    align-items: center;
+
+    img {
+        height: 40px;
+        align-self: center;
+        margin-right: 10px;
+        padding-left: 10px;
+    }
+
+    .siteName {
+        text-align: center;
+        font-size: 6vh;
+        color: #9553EE;
+        font-weight: bold;
+    }
+}

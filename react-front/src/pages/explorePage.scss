@@ -1,44 +1,56 @@
 .explorePage {
   background-color: #ffffff;
   height: 100vh;
-  .buttonsBar {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    margin-top: 5vh;
-    .button1,.button2 {
-      display: inline-block;
-      padding: 0.35em 1.2em;
-      border: 0.1em solid #9553EE;
-      margin: 0 0.3em 0.3em 0;
-      border-radius: 0.12em;
-      box-sizing: border-box;
-      text-decoration: none;
-      font-family: "Roboto", sans-serif;
-      font-weight: 300;
-      color: #9553EE;
-      text-align: center;
-      transition: all 0.2s;
-    }
-    .button1:hover,.button2:hover {
-      color: white;
-      background-color: #9553EE;
-    }
-    @media all and (max-width: 30em) {
-      .button1,.button2 {
-        display: block;
-        margin: 0.4em auto;
-      }
-    }
-  }
   .categoryBar {
     display: flex;
     flex-direction: row;
-    height: 15vh;
+    height: 9vh;
     background-color: rgb(243, 243, 243);
+    align-items: center;
+    .buttonsBar {
+      display: flex;
+      flex-direction: row;
+      right: 0;
+      position: absolute;
+      right: 1vw;
+      .button1,
+      .button2 {
+        display: inline-block;
+        padding: 0.35em 1.2em;
+        border: 0.1em solid #9553ee;
+        margin: 0 0.3em 0.3em 0;
+        border-radius: 0.12em;
+        box-sizing: border-box;
+        text-decoration: none;
+        font-family: "Roboto", sans-serif;
+        font-weight: 300;
+        color: #9553ee;
+        text-align: center;
+        transition: all 0.2s;
+        height: fit-content;
+      }
+      .button1:hover,
+      .button2:hover {
+        color: white;
+        background-color: #9553ee;
+      }
+      @media all and (max-width: 30em) {
+        .button1,
+        .button2 {
+          display: block;
+          margin: 0.4em auto;
+        }
+      }
+    }
+    .categories{
+      display: flex;
+      flex-direction: row;
+    }
   }
   .CardsShow {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
+    justify-content: space-around;
   }
 }
