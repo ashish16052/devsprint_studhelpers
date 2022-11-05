@@ -1,19 +1,21 @@
 .explorePage {
   background-color: #ffffff;
   height: 100vh;
+
   .categoryBar {
     display: flex;
     flex-direction: row;
-    height: 9vh;
+    justify-content: space-between;
+    flex-wrap: wrap;
     background-color: rgb(243, 243, 243);
     align-items: center;
-    
+
     .buttonsBar {
       display: flex;
       flex-direction: row;
       right: 0;
-      position: absolute;
-      right: 1vw;
+      margin: 20px 30px;
+
       .button1,
       .button2 {
         display: inline-block;
@@ -30,12 +32,15 @@
         transition: all 0.2s;
         height: fit-content;
       }
+
       .button1:hover,
       .button2:hover {
         color: white;
         background-color: #9553ee;
       }
+
       @media all and (max-width: 30em) {
+
         .button1,
         .button2 {
           display: block;
@@ -43,30 +48,73 @@
         }
       }
     }
-    .genreDropDown{
-      width: 35vw;
-    }
-    .wrapSearchBar{
 
-      .search{
+    .genreDropDown {
+      width: 30vw;
+      margin: 20px 30px;
+    }
+
+    @media only screen and (max-width: 600px) {
+      .genreDropDown {
+        width: 100vw;
+      margin: 10px 30px;
+      }
+    }
+
+
+
+    .wrapSearchBar {
+
+      .search {
         display: flex;
         align-items: center;
-        .searchTerm{
-          width: 16vw;
+        margin: 10px 30px;
+
+        .searchTerm {
+          width: 30vw;
           height: 4vh;
-          border-radius: 8px;
-          margin-left: 10vw;
+          outline: none;
+          border: none;
+          padding: 8px 10px;
+          font-size: 15px;
         }
-        img.searchImage{
-          height: 3.55vh;
+
+        @media only screen and (max-width: 600px) {
+          .searchTerm {
+            width: 72vw;
+          }
+        }
+
+        img.searchImage {
+          height: 20px;
+          border: 10px solid #9553ee;
+          cursor: pointer;
         }
       }
     }
   }
+
   .CardsShow {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
+  }
+
+}
+
+@media only screen and (max-width: 600px) {
+  .genreDropDown {
+    margin: 0px 30px;
+  }
+
+  .buttonsBar {
+    margin: 0px 30px;
+  }
+
+  .wrapSearchBar {
+    .search {
+      margin: 0px 30px;
+    }
   }
 }

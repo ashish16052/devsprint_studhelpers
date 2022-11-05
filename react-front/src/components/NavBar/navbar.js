@@ -10,8 +10,9 @@ const Navbar = () => {
         <div className="siteName">StudCart</div>
       </div>
       <div className="RightSidebar">
+        <div className="username">Hi User</div>
         <img src={ProfileImage} alt="Profile Image" />
-          <p>Log Out</p>
+        <p>Log Out</p>
       </div>
     </div>
   );

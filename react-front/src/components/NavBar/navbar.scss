@@ -1,13 +1,15 @@
 .Navbar {
   display: flex;
   justify-content: space-between;
+  padding: 10px 20px;
   padding-right: 1vw;
+
   .brand {
     display: flex;
     align-items: center;
 
     img {
-      height: 40px;
+      height: 25px;
       align-self: center;
       margin-right: 10px;
       padding-left: 10px;
@@ -15,33 +17,43 @@
 
     .siteName {
       text-align: center;
-      font-size: 6vh;
+      font-size: 5vh;
       color: #9553ee;
       font-weight: bold;
     }
   }
+
   .RightSidebar {
     display: flex;
     align-items: center;
-   
+    margin-right: 20px;
     align-self: center;
     border-color: #9553ee;
-      p {
-        font-size: 2.1vh;
-        color: #9553ee;
-        border-style: solid;
-        width: fit-content;
-        height: fit-content;
-        padding:7px;
-        border-width: 2px;
-      }
-      p:hover{
-        background-color: #9553ee;
-        color: white;
-      }
+
+    .username{
+      margin: 0 5px;
+      color: #9553ee;
+    }
+
+    p {
+      border-radius: 5px;
+      font-size: 2.1vh;
+      color: #9553ee;
+      border: 1px solid #9553ee;
+      width: fit-content;
+      height: fit-content;
+      padding: 7px;
+    }
+
+    p:hover {
+      background-color: #9553ee;
+      color: white;
+    }
+
     img {
-      width: 3vw;
+      width: 30px;
       padding-right: 8px;
+      margin-right: 10px;
     }
   }
 }

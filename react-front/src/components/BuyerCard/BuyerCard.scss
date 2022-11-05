@@ -1,5 +1,5 @@
 .BuyerCard {
-    width: 350px;
+    width: 27vw;
     background-color: rgb(243, 243, 243);
     padding: 5px;
     border-radius: 10px;
@@ -62,5 +62,17 @@
         font-size: 15px;
         font-weight: bold;
         cursor: pointer;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .BuyerCard {
+        width: 40vw;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .BuyerCard {
+        width: 80vw;
     }
 }
