@@ -67,6 +67,7 @@ const PostForm = () => {
           <hr />
           <div className='info-grp'>
             <input type="file" onChange={uploadFile} />
+            <p>(Only Image Allowed)</p>
             <input onChange={(e) => setPrice(e.target.value)} value={price} type="number" placeholder='Selling price' />
           </div>
           <div className='info-grp'>
