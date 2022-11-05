@@ -7,6 +7,7 @@
     height: 9vh;
     background-color: rgb(243, 243, 243);
     align-items: center;
+    
     .buttonsBar {
       display: flex;
       flex-direction: row;
@@ -42,9 +43,15 @@
         }
       }
     }
-    .categories{
-      display: flex;
-      flex-direction: row;
+    .genreDropDown{
+      width: 40vw;
+    }
+    .wrapSearchBar{
+      .search{
+        .searchTerm{
+          
+        }
+      }
     }
   }
   .CardsShow {
