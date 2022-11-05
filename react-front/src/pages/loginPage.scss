@@ -1,44 +1,59 @@
-.loginPage{
+.loginPage {
     display: flex;
     height: 100vh;
     flex-direction: column;
     position: relative;
     align-items: center;
-    img{
-        width: 130px;
-        height: 110px;
-        margin-top: 8vh;
-        align-self: center;
+    justify-content: center;
+
+    .brand {
+        display: flex;
+        align-items: center;
+
+        img {
+            height: 50px;
+            align-self: center;
+            margin-right: 10px;
+        }
+
+        .siteName {
+            text-align: center;
+            font-size: 8vh;
+            color: #9553EE;
+            font-weight: bold;
+        }
     }
-    .siteName{
+
+    .signInHeading {
         text-align: center;
-        font-size: 8vh;
-    }
-    .signInHeading{
-        text-align: center;
-       margin-top: 1vh;
+        margin-top: 60px;
         font-size: 5vh;
     }
-    .loginOption{
+
+    .loginOption {
         display: flex;
+        cursor: pointer;
         flex-direction: row;
-        margin-top: 10vh;
+        margin-top: 30px;
         align-items: center;
         border-radius: 20px;
-        border-style: solid;
-        width:fit-content;
+        border: 2px solid #9553EE;
+        width: fit-content;
         padding: 12px;
-        img{
+
+        img {
             margin: 0;
             width: 50px;
-            height:50px ;
+            height: 50px;
         }
-        p{
+
+        p {
             margin-left: 1vw;
             font-size: 3vh;
         }
     }
-    .loginFooter{
+
+    .loginFooter {
         text-align: center;
         margin-top: 30vh;
         padding-left: 2vw;
