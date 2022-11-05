@@ -21,8 +21,8 @@ module.exports.controllerFunction = function (app) {
 
     mainRouter.get('/google/callback', passport.authenticate('google',
         {
-            successRedirect: process.env.CLIENT_URL + "/dashboard",
-            failureRedirect: process.env.CLIENT_URL + "/auth",
+            successRedirect: process.env.CLIENT_URL,
+            failureRedirect: process.env.CLIENT_URL + "/login",
             scope: ['profile', 'email'],
         }
     ));

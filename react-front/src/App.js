@@ -29,9 +29,11 @@ function App() {
     <div className="App">
       <Routes>
         <Route exact path='/' element={user ? <Home /> : <Navigate to='/login' />} />
-        <Route exact path='/login' element={user ? <Home /> : <Login />} />
+        <Route exact path='/login' element={<Login />} />
       </Routes>
       <ExplorePage/>
+      {/* <Login/> */}
+      {/* <ExplorePage/> */}
     </div>
   );
 }
