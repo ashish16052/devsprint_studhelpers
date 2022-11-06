@@ -15,7 +15,7 @@ https://studcart.ashishmohite160.repl.co/
 ## Features
 
 - Sell your products by placing the minimal amount of bid to take place
-- Drag and drop images (to make your deal look authentic and better)
+- Drag and drop images in sell section (to make your deal look authentic and better)
 - Buy Products by placing the appropriate bid.
 - Request products that you want to buy
 
