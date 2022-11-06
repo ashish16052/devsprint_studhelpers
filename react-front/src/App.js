@@ -29,9 +29,9 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        <Route exact path='/' element={user ? <ExplorePage/> : <Navigate to='/login' />} />
+        <Route exact path='/' element={user ? <ExplorePage /> : <Navigate to='/login' />} />
         <Route exact path='/login' element={<Login />} />
-        <Route exact path='/user' element={<User/>}/>
+        <Route exact path='/user' element={user ? <User /> : <Navigate to='/login' />} />
       </Routes>
     </div>
   );

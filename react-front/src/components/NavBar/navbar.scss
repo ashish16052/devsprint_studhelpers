@@ -4,6 +4,10 @@
   padding: 10px 20px;
   padding-right: 1vw;
 
+  a {
+    text-decoration: none;
+  }
+
   .brand {
     display: flex;
     align-items: center;
@@ -27,11 +31,11 @@
     display: flex;
     align-items: center;
     margin-right: 20px;
-   margin-right: 20px;
+    margin-right: 20px;
     align-self: center;
     border-color: #9553ee;
 
-    .username{
+    .username {
       margin: 0 5px;
       color: #9553ee;
     }

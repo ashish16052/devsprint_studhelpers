@@ -14,8 +14,8 @@ const productSchema = new Schema({
         type: Number,
     },
     bid: {
-        type: Number,
-        default: 0
+        type: [Object],
+        default: []
     },
     city: {
         type: String,

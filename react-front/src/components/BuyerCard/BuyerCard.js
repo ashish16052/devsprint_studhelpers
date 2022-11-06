@@ -16,6 +16,7 @@ const BuyerCard = (props) => {
     seller: props.product.seller,
     tags: props.product.tags,
     picture: props.product.picture,
+    bid: props.product.bid
   }
 
   const dispatch = useDispatch();

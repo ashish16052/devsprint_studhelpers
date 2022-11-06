@@ -14,14 +14,14 @@ const User = () => {
   const [products, setProducts] = useState([])
 
   const getProducts = async () => {
-    const { data } = await axios.post(`${process.env.REACT_APP_API_URL}/product/readAll`)
+    const { data } = await axios.post(`${process.env.REACT_APP_API_URL}/product/readByUser/${user._id}`)
     console.log(data);
     setProducts(data);
   }
 
   useEffect(() => {
     getProducts();
-  }, [modal])
+  }, [user,modal])
 
   return (
     <div className="ShowUserPage">

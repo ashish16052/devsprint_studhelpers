@@ -17,38 +17,106 @@
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 30px 30px;
+    display: flex;
 
     .cancel-btn {
       width: 1.5vw;
       height: 3vh;
-      border-style: solid;
       padding: 0%;
       text-align: center;
       border-color: #9553ee;
       color: #9553ee;
-    }
-    .cancel-btn:hover {
-      background-color: #9553ee;
-      color: white;
-    }
-  }
-  .DisplayCard{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    img{
-      width:200px;
-    }
-    .DesAndBid{
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      padding: 2%;
-      .BidCardsRow{
-        display: flex;
-        justify-content: space-around;
+      cursor: pointer;
+      position: absolute;
+      top: 10px;
+      right: 20px;
+
+      img {
+        height: 30px;
       }
     }
   }
+
+  .DisplayCard {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 0 20px 0 0;
+
+    h2 {
+      padding: 15px 0;
+    }
+
+    img {
+      height: 300px;
+      border-radius: 10px;
+    }
+  }
+
+  .right {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+
+    .DesAndBid {
+      display: flex;
+      flex-direction: column;
+      overflow-y: scroll;
+      scrollbar-width: none;
+      width: 100%;
+      height: 300px;
+
+      .seller {
+        display: flex;
+        align-items: center;
+
+        img {
+          height: 50px;
+          border-radius: 50%;
+          margin-right: 10px;
+        }
+
+        p {
+          font-size: 20px;
+        }
+      }
+
+      .desc {
+        margin: 20px 0;
+      }
+
+      .BidCardsRow {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    .DesAndBid::-webkit-scrollbar {
+      display: none;
+    }
+
+    .place-bid {
+      padding: 15px 0;
+      display: flex;
+      justify-content: space-between;
+
+      input {
+        border: 1px solid #9553ee;
+        outline: none;
+        padding: 5px 10px;
+        font-size: 20px;
+        border-radius: 5px;
+      }
+
+      .submit-bid {
+        background-color: #9553ee;
+        color: #ffffff;
+        padding: 5px 10px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    }
+  }
+
+
 }
