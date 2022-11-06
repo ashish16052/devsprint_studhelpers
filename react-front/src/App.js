@@ -6,7 +6,7 @@ import Login from "./pages/Login";
 import Home from "./pages/Home";
 import { useDispatch } from 'react-redux'
 import { login } from './reducers/user'
-import User from './pages/User'
+import User from './pages/user'
 
 import ExplorePage from "./pages/explorePage"
 function App() {

@@ -26,10 +26,6 @@ const Product = () => {
             <p>Description</p>
             <div className="BidCardsRow">
               <Bidcard />
-              <Bidcard />
-              <Bidcard />
-              <Bidcard />
-              <Bidcard />
             </div>
           </div>
         </div>
