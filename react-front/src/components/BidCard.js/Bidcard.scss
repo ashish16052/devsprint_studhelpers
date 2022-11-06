@@ -2,30 +2,30 @@
     background-color: rgb(236, 234, 234);
     display: flex;
     width: auto;
-    height: 10vh;
     align-items: center;
     justify-content: space-between;
     padding: 4px;
+    border-radius: 10px;
+    margin: 10px 0;
     .UserImage{
         width: auto;
-        height: 80px;
+        height: 40px;
+        border-radius: 50%;
+        margin-left: 10px;
     }
     .UserName{
-       font-size: 20px;
+       font-size: 15px;
        padding: 4px;
     }
     .UserEmail{
-        font-size: 15px;
+        font-size: 12px;
         padding: 6px;
     }
     .BidSection{
-        height:45px;
+        padding: 15px 10px;
+        border-radius: 10px;
         background-color: #9553ee;
         color: white;
-        padding-left: 8px;
-        padding-right: 8px;
-        padding-top: 3px;
-        padding-bottom: 3px;
         display: flex;
         align-items: center;
     }

@@ -112,4 +112,11 @@
       }
     }
   }
+
+  @media only screen and (max-width: 1000px) {
+    .form-modal {
+      width: 80vw;
+      height: 60vh;
+    }
+  }
 }

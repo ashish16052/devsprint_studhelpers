@@ -19,6 +19,7 @@
     padding: 30px 30px;
     display: flex;
 
+
     .cancel-btn {
       width: 1.5vw;
       height: 3vh;
@@ -50,6 +51,7 @@
     img {
       height: 300px;
       border-radius: 10px;
+      object-fit: cover;
     }
   }
 
@@ -96,7 +98,7 @@
     }
 
     .place-bid {
-      padding: 15px 0;
+      padding: 12px 0;
       display: flex;
       justify-content: space-between;
 
@@ -118,5 +120,24 @@
     }
   }
 
+  @media only screen and (max-width: 1000px) {
+    .product-modal {
+      width: 80vw;
+      height: 80vh;
+      flex-direction: column;
+      overflow-y: scroll;
+    }
 
+    .DisplayCard{
+      width: 100%;
+    }
+
+    .right {
+      width: 100%;
+    }
+
+    .product-modal::-webkit-scrollbar {
+      display: none;
+    }
+  }
 }

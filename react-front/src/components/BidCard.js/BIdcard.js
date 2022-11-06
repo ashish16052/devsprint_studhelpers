@@ -1,14 +1,16 @@
 import React from "react";
 import "./Bidcard.scss";
 import UserImage from "../../assets/profileIcon.svg";
-const Bidcard = () => {
+const Bidcard = (props) => {
   return (
     <div className="BidBuyerDetails">
-      <img src={UserImage} className="UserImage" alt="User Profile Image" />
-      <p className="UserName">UserName Here</p>
-      <p className="UserEmail">Email Here</p>
+      <img src={props.bid.userData.profilePic} className="UserImage" alt="User Profile Image" />
+      <div className="userInfo">
+        <p className="UserName">{props.bid.userData.name}</p>
+        <p className="UserEmail">{props.bid.userData.email}</p>
+      </div>
       <div className="BidSection">
-        <p>10,000</p>
+        <p>{props.bid.bid}</p>
       </div>
     </div>
   );

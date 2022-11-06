@@ -36,7 +36,7 @@ const ExplorePage = () => {
 
   useEffect(() => {
     getProducts();
-  }, [modal])
+  }, [modal, productModal])
 
 
   return (
@@ -68,15 +68,15 @@ const ExplorePage = () => {
           <div class="button1" onClick={showModal}>
             Sell
           </div>
-          <div class="button2">
+          {/* <div class="button2">
             Req Buy
-          </div>
+          </div> */}
         </div>
       </div>
       <div className="CardsShow">
         {
           products.map((product) => (
-            <Cards product={product} editable={false}/>
+            <Cards product={product} editable={false} />
           ))
         }
       </div>

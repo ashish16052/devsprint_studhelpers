@@ -67,10 +67,9 @@ const Product = () => {
                 productData.bid.length &&
 
                 productData.bid.map((bid) => (
-                  <p>{bid.bid}</p>
+                  <Bidcard bid={bid}/>
                 ))
               }
-              <Bidcard />
             </div>
           </div>
           <div className="place-bid">
