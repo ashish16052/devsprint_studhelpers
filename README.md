@@ -6,7 +6,7 @@
 
 @nitya-bhanu
 
-##studCart
+## studCart
 studCart is an exclusive student oriented platform which is meant for buying and selling products by placing bids and posting bids respectively.
 
 ## Website Link
