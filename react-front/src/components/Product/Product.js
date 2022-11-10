@@ -12,6 +12,7 @@ const Product = () => {
   const dispatch = useDispatch();
   const [user, setUser] = useState({});
   const [bid, setBid] = useState('');
+  const userData = useSelector((state) => state.user.value)
 
   const closeModal = () => {
     dispatch(hideProductModal());
@@ -32,7 +33,7 @@ const Product = () => {
   const submitBid = async () => {
     const { data } = await axios.post(`${process.env.REACT_APP_API_URL}/product/submitBid/${productData._id}`,
       {
-        userData: user,
+        userData: userData,
         bid: bid
       })
     console.log(data);
