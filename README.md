@@ -10,7 +10,7 @@
 studCart is an exclusive student oriented platform which is meant for buying and selling products by placing bids and posting bids respectively.
 
 ## Website Link
-https://studcart.ashishmohite160.repl.co/
+https://stud-cart.web.app/
 
 ## Presentation Link
 https://www.canva.com/design/DAFRJ_k6fy8/05EmOJtAyV6rweDPgBHM0w/edit?utm_content=DAFRJ_k6fy8&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
